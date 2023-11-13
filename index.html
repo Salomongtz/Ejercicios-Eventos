@@ -14,7 +14,7 @@
     <header class="text-center my-8">
         <h1 class="text-6xl text-[#001427] font-bold">Ejercicios de Eventos</h2>
     </header>
-    <main class="flex flex-wrap justify-center gap-8 grow">
+    <main class="flex flex-wrap justify-center gap-8 p-4 grow">
 
         <!-- Ejercicio 1 -->
 
@@ -41,41 +41,57 @@
 
         <!-- Ejercicio 3 -->
 
-        <form class="w-96 flex flex-col gap-6 justify-center bg-[#8d0801] p-4" action="" id="calcularIMC">
+        <form class="w-96 flex flex-col gap-6 justify-center bg-[#8d0801] py-4 px-10" action="" id="calcularIMC">
             <label class="font-bold" for="estatura">Estatura
                 <label class="italic font-normal" for="estatura"><br>en centímetros</label>
             </label>
+            <input class="text-[#001427] p-2 text-center" type="number" name="estatura" id="estatura">
 
-            <input class="text-[#001427]" type="number" name="estatura" id="estatura">
             <label class="font-bold" for="peso">Peso
                 <label class="italic font-normal" for="peso"><br>en kilogramos</label>
             </label>
-            <input class="text-[#001427]" type="number" name="peso" id="peso">
+            <input class="text-[#001427] p-2 text-center" type="number" name="peso" id="peso">
+
             <label class="font-bold" for="resultadoIMC">resultadoIMC
                 <label class="italic font-normal" for="resultadoIMC"><br>su índice de masa corporal es:</label>
             </label>
-            <input class="text-[#001427]" type="number" name="resultadoIMC" id="resultadoIMC" readonly>
+            <input class="text-[#001427] p-2 text-center" type="number" name="resultadoIMC" id="resultadoIMC" readonly>
+
             <input class="p-2 bg-[#001427] font-bold" type="submit" value="Calcular" id="botonCalcularIMC">
         </form>
 
         <!-- Ejercicio 4 -->
 
-        <form class="w-96 flex flex-col gap-6 justify-center bg-[#8d0801] p-4" action="" id="calcularIMC">
-            <label class="font-bold" for="monedaLocal">Monto moneda local
-                <label class="italic font-normal" for="monedaLocal"><br>sin comas ni puntos</label>
-            </label>
+        <form class="w-96 flex flex-col gap-6 justify-center bg-[#8d0801] py-4 px-8" action="">
 
-            <input class="text-[#001427]" type="number" name="estatura" id="estatura">
-            <label class="font-bold" for="peso">Peso
-                <label class="italic font-normal" for="peso"><br>en kilogramos</label>
-            </label>
-            <input class="text-[#001427]" type="number" name="peso" id="peso">
-            <label class="font-bold" for="resultadoIMC">resultadoIMC
-                <label class="italic font-normal" for="resultadoIMC"><br>su índice de masa corporal es:</label>
-            </label>
-            <input class="text-[#001427]" type="number" name="resultadoIMC" id="resultadoIMC" readonly>
-            <input class="p-2 bg-[#001427] font-bold" type="submit" value="Calcular" id="botonCalcularIMC">
+            <fieldset class=" flex flex-col gap-6 justify-center" id="convertirDivisa">
+                <label class="font-bold" for="monedaLocal" id="monedaLocalLabel">Moneda local (Peso Colombiano)
+                    <label class="italic font-normal" for="monedaLocal"><br>sin comas ni puntos</label>
+                </label>
+                <input class="text-[#001427] p-2 text-center" type="number" name="monedaLocal" id="moneda">
+                <label class="font-bold" for="dolares" id="dolaresLabel">Dólares
+                    <label class="italic font-normal" for="dolares"><br>sin comas ni puntos</label>
+                </label>
+                <input class="text-[#001427] p-2 text-center" type="number" name="dolares" id="resultado" readonly>
+            </fieldset>
+
+            <fieldset class="flex items-center justify-between w-full">
+                <input class="p-2 bg-[#001427] font-bold" type="submit" value="Convertir" id="botonConvertirDivisa">
+                <div class="flex flex-col">
+                    <div class="flex gap-4 justify-center items-center">
+                        <label for="switch">Pesos a dólares</label>
+                        <input type="radio" name="switch" id="localADolar" checked>
+                    </div>
+                    <div class="flex gap-4 justify-center items-center">
+                        <label for="switch">Dólares a pesos</label>
+                        <input type="radio" name="switch" id="dolarALocal">
+                    </div>
+                </div>
+                <input class="p-2 bg-[#001427] font-bold" type="submit" value="Reiniciar" id="botonReiniciarDivisa">
+            </fieldset>
+
         </form>
+
     </main>
     <footer class="text-center text-[#001427]">
         <h4>MINDHUB - Cohort FS052 JAVA - Salomón Gutiérrez</h4>
